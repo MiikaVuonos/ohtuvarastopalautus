@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5.1 (Python 3.14.10 on win32)" generated="2026-11-12T21:49:28.373694" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\kurssit\ohtu\ohtuvarastopalautus\osa3\login-robot\src\tests">
+<suite id="s1-s1" name="Login" source="C:\kurssit\ohtu\ohtuvarastopalautus\osa3\login-robot\src\tests\login.robot">
+<test id="s1-s1-t1" name="Login With Correct Credentials" line="6">
+<kw name="Create User And Input Login Command" type="SETUP">
+<kw name="Create User" owner="AppLibrary">
+<msg time="2026-11-12T21:49:28.427547" level="INFO">Ok
+Ok</msg>
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<status status="PASS" start="2026-11-12T21:49:28.427350" elapsed="0.000251"/>
+</kw>
+<kw name="Input Login Command" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>login</arg>
+<status status="PASS" start="2026-11-12T21:49:28.427901" elapsed="0.000074"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.427732" elapsed="0.000303"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.426936" elapsed="0.001138"/>
+</kw>
+<kw name="Input Credentials" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.428579" elapsed="0.000105"/>
+</kw>
+<kw name="Input" owner="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.428759" elapsed="0.000095"/>
+</kw>
+<kw name="Run Application" owner="AppLibrary">
+<status status="PASS" start="2026-11-12T21:49:28.428913" elapsed="0.000064"/>
+</kw>
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<status status="PASS" start="2026-11-12T21:49:28.428340" elapsed="0.000671"/>
+</kw>
+<kw name="Output Should Contain" owner="AppLibrary">
+<arg>Logged in</arg>
+<status status="PASS" start="2026-11-12T21:49:28.429198" elapsed="0.000096"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.426092" elapsed="0.003390"/>
+</test>
+<test id="s1-s1-t2" name="Login With Incorrect Password" line="10">
+<kw name="Create User And Input Login Command" type="SETUP">
+<kw name="Create User" owner="AppLibrary">
+<msg time="2026-11-12T21:49:28.430456" level="INFO">Ok
+Ok</msg>
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<status status="PASS" start="2026-11-12T21:49:28.430364" elapsed="0.000130"/>
+</kw>
+<kw name="Input Login Command" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>login</arg>
+<status status="PASS" start="2026-11-12T21:49:28.430742" elapsed="0.000078"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.430584" elapsed="0.000296"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.430135" elapsed="0.000775"/>
+</kw>
+<kw name="Input Credentials" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.431303" elapsed="0.000073"/>
+</kw>
+<kw name="Input" owner="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.431444" elapsed="0.000065"/>
+</kw>
+<kw name="Run Application" owner="AppLibrary">
+<status status="PASS" start="2026-11-12T21:49:28.431562" elapsed="0.000064"/>
+</kw>
+<arg>kalle</arg>
+<arg>kalle12</arg>
+<status status="PASS" start="2026-11-12T21:49:28.431123" elapsed="0.000536"/>
+</kw>
+<kw name="Output Should Contain" owner="AppLibrary">
+<arg>Invalid username or password</arg>
+<status status="PASS" start="2026-11-12T21:49:28.431857" elapsed="0.000100"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.429832" elapsed="0.002322"/>
+</test>
+<test id="s1-s1-t3" name="Login With Nonexistent Username" line="14">
+<kw name="Create User And Input Login Command" type="SETUP">
+<kw name="Create User" owner="AppLibrary">
+<msg time="2026-11-12T21:49:28.433077" level="INFO">Ok
+Ok</msg>
+<arg>kalle</arg>
+<arg>kalle123</arg>
+<status status="PASS" start="2026-11-12T21:49:28.432982" elapsed="0.000129"/>
+</kw>
+<kw name="Input Login Command" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>login</arg>
+<status status="PASS" start="2026-11-12T21:49:28.433339" elapsed="0.000059"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.433201" elapsed="0.000239"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.432808" elapsed="0.000670"/>
+</kw>
+<kw name="Input Credentials" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.433927" elapsed="0.000097"/>
+</kw>
+<kw name="Input" owner="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.434100" elapsed="0.000087"/>
+</kw>
+<kw name="Run Application" owner="AppLibrary">
+<status status="PASS" start="2026-11-12T21:49:28.434254" elapsed="0.000069"/>
+</kw>
+<arg>kallee</arg>
+<arg>kalle123</arg>
+<status status="PASS" start="2026-11-12T21:49:28.433686" elapsed="0.000678"/>
+</kw>
+<kw name="Output Should Contain" owner="AppLibrary">
+<arg>Invalid username or password</arg>
+<status status="PASS" start="2026-11-12T21:49:28.434553" elapsed="0.000092"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.432515" elapsed="0.002298"/>
+</test>
+<status status="PASS" start="2026-11-12T21:49:28.412996" elapsed="0.022319"/>
+</suite>
+<suite id="s1-s2" name="Register" source="C:\kurssit\ohtu\ohtuvarastopalautus\osa3\login-robot\src\tests\register.robot">
+<test id="s1-s2-t1" name="Register With Valid Username And Password" line="6">
+<kw name="Input New Command And Create User" type="SETUP">
+<kw name="Input New Command" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>new</arg>
+<status status="PASS" start="2026-11-12T21:49:28.439438" elapsed="0.000095"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.439264" elapsed="0.000319"/>
+</kw>
+<kw name="Create User" owner="AppLibrary">
+<msg time="2026-11-12T21:49:28.439725" level="INFO">Ok
+Ok</msg>
+<arg>kissa</arg>
+<arg>kissa123</arg>
+<status status="PASS" start="2026-11-12T21:49:28.439646" elapsed="0.000114"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.439029" elapsed="0.000774"/>
+</kw>
+<kw name="Input Credentials" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.440151" elapsed="0.000072"/>
+</kw>
+<kw name="Input" owner="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.440285" elapsed="0.000070"/>
+</kw>
+<kw name="Run Application" owner="AppLibrary">
+<msg time="2026-11-12T21:49:28.440465" level="INFO">Ok
+Ok</msg>
+<status status="PASS" start="2026-11-12T21:49:28.440409" elapsed="0.000084"/>
+</kw>
+<arg>kissaa</arg>
+<arg>kissa123</arg>
+<status status="PASS" start="2026-11-12T21:49:28.439975" elapsed="0.000549"/>
+</kw>
+<kw name="Output Should Contain" owner="AppLibrary">
+<arg>New user registered</arg>
+<status status="PASS" start="2026-11-12T21:49:28.440656" elapsed="0.000068"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.438664" elapsed="0.002220"/>
+</test>
+<test id="s1-s2-t2" name="Register With Already Taken Username And Valid Password" line="10">
+<kw name="Input New Command And Create User" type="SETUP">
+<kw name="Input New Command" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>new</arg>
+<status status="PASS" start="2026-11-12T21:49:28.441808" elapsed="0.000068"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.441679" elapsed="0.000235"/>
+</kw>
+<kw name="Create User" owner="AppLibrary">
+<msg time="2026-11-12T21:49:28.442023" level="INFO">Ok
+Ok</msg>
+<arg>kissa</arg>
+<arg>kissa123</arg>
+<status status="PASS" start="2026-11-12T21:49:28.441963" elapsed="0.000088"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.441510" elapsed="0.000575"/>
+</kw>
+<kw name="Input Credentials" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.442407" elapsed="0.000068"/>
+</kw>
+<kw name="Input" owner="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.442532" elapsed="0.000068"/>
+</kw>
+<kw name="Run Application" owner="AppLibrary">
+<msg time="2026-11-12T21:49:28.442727" level="INFO">Ok
+Ok</msg>
+<status status="PASS" start="2026-11-12T21:49:28.442651" elapsed="0.000106"/>
+</kw>
+<arg>kissa</arg>
+<arg>kissa123</arg>
+<status status="PASS" start="2026-11-12T21:49:28.442237" elapsed="0.000552"/>
+</kw>
+<kw name="Output Should Contain" owner="AppLibrary">
+<arg>User with username kissa already exists</arg>
+<status status="PASS" start="2026-11-12T21:49:28.442928" elapsed="0.000089"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.441209" elapsed="0.002006"/>
+</test>
+<test id="s1-s2-t3" name="Register With Too Short Username And Valid Password" line="14">
+<kw name="Input New Command And Create User" type="SETUP">
+<kw name="Input New Command" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>new</arg>
+<status status="PASS" start="2026-11-12T21:49:28.444434" elapsed="0.000086"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.444262" elapsed="0.000307"/>
+</kw>
+<kw name="Create User" owner="AppLibrary">
+<msg time="2026-11-12T21:49:28.444712" level="INFO">Ok
+Ok</msg>
+<arg>kissa</arg>
+<arg>kissa123</arg>
+<status status="PASS" start="2026-11-12T21:49:28.444632" elapsed="0.000115"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.443954" elapsed="0.000850"/>
+</kw>
+<kw name="Input Credentials" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.445308" elapsed="0.000096"/>
+</kw>
+<kw name="Input" owner="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.445472" elapsed="0.000080"/>
+</kw>
+<kw name="Run Application" owner="AppLibrary">
+<status status="PASS" start="2026-11-12T21:49:28.445618" elapsed="0.000067"/>
+</kw>
+<arg>ki</arg>
+<arg>kissa123</arg>
+<status status="PASS" start="2026-11-12T21:49:28.445092" elapsed="0.000631"/>
+</kw>
+<kw name="Output Should Contain" owner="AppLibrary">
+<arg>Username invalid</arg>
+<status status="PASS" start="2026-11-12T21:49:28.445887" elapsed="0.000109"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.443611" elapsed="0.002624"/>
+</test>
+<test id="s1-s2-t4" name="Register With Enough Long But Invalid Username And Valid Password" line="18">
+<kw name="Input New Command And Create User" type="SETUP">
+<kw name="Input New Command" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>new</arg>
+<status status="PASS" start="2026-11-12T21:49:28.447170" elapsed="0.000400"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.447033" elapsed="0.000581"/>
+</kw>
+<kw name="Create User" owner="AppLibrary">
+<msg time="2026-11-12T21:49:28.447739" level="INFO">Ok
+Ok</msg>
+<arg>kissa</arg>
+<arg>kissa123</arg>
+<status status="PASS" start="2026-11-12T21:49:28.447671" elapsed="0.000097"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.446844" elapsed="0.000961"/>
+</kw>
+<kw name="Input Credentials" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.448228" elapsed="0.000091"/>
+</kw>
+<kw name="Input" owner="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.448389" elapsed="0.000080"/>
+</kw>
+<kw name="Run Application" owner="AppLibrary">
+<status status="PASS" start="2026-11-12T21:49:28.448533" elapsed="0.000066"/>
+</kw>
+<arg>kissa2</arg>
+<arg>kissa123</arg>
+<status status="PASS" start="2026-11-12T21:49:28.448008" elapsed="0.000630"/>
+</kw>
+<kw name="Output Should Contain" owner="AppLibrary">
+<arg>Username invalid</arg>
+<status status="PASS" start="2026-11-12T21:49:28.448781" elapsed="0.000067"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.446531" elapsed="0.002440"/>
+</test>
+<test id="s1-s2-t5" name="Register With Valid Username And Too Short Password" line="22">
+<kw name="Input New Command And Create User" type="SETUP">
+<kw name="Input New Command" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>new</arg>
+<status status="PASS" start="2026-11-12T21:49:28.449977" elapsed="0.000067"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.449845" elapsed="0.000237"/>
+</kw>
+<kw name="Create User" owner="AppLibrary">
+<msg time="2026-11-12T21:49:28.450202" level="INFO">Ok
+Ok</msg>
+<arg>kissa</arg>
+<arg>kissa123</arg>
+<status status="PASS" start="2026-11-12T21:49:28.450140" elapsed="0.000090"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.449677" elapsed="0.000588"/>
+</kw>
+<kw name="Input Credentials" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.450624" elapsed="0.000074"/>
+</kw>
+<kw name="Input" owner="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.450755" elapsed="0.000066"/>
+</kw>
+<kw name="Run Application" owner="AppLibrary">
+<msg time="2026-11-12T21:49:28.450936" level="INFO">Ok</msg>
+<status status="PASS" start="2026-11-12T21:49:28.450876" elapsed="0.000093"/>
+</kw>
+<arg>kisssa</arg>
+<arg>kissa12</arg>
+<status status="PASS" start="2026-11-12T21:49:28.450444" elapsed="0.000563"/>
+</kw>
+<kw name="Output Should Contain" owner="AppLibrary">
+<arg>Password invalid</arg>
+<status status="PASS" start="2026-11-12T21:49:28.451148" elapsed="0.000076"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.449375" elapsed="0.002000"/>
+</test>
+<test id="s1-s2-t6" name="Register With Valid Username And Long Enough Password Containing Only Letters" line="26">
+<kw name="Input New Command And Create User" type="SETUP">
+<kw name="Input New Command" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>new</arg>
+<status status="PASS" start="2026-11-12T21:49:28.452473" elapsed="0.000081"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.452300" elapsed="0.000300"/>
+</kw>
+<kw name="Create User" owner="AppLibrary">
+<msg time="2026-11-12T21:49:28.452734" level="INFO">Ok
+Ok</msg>
+<arg>kissa</arg>
+<arg>kissa123</arg>
+<status status="PASS" start="2026-11-12T21:49:28.452660" elapsed="0.000110"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.452093" elapsed="0.000720"/>
+</kw>
+<kw name="Input Credentials" owner="resource">
+<kw name="Input" owner="AppLibrary">
+<arg>${username}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.453215" elapsed="0.000086"/>
+</kw>
+<kw name="Input" owner="AppLibrary">
+<arg>${password}</arg>
+<status status="PASS" start="2026-11-12T21:49:28.453368" elapsed="0.000077"/>
+</kw>
+<kw name="Run Application" owner="AppLibrary">
+<msg time="2026-11-12T21:49:28.453570" level="INFO">Ok</msg>
+<status status="PASS" start="2026-11-12T21:49:28.453508" elapsed="0.000096"/>
+</kw>
+<arg>kisssa</arg>
+<arg>kisssass</arg>
+<status status="PASS" start="2026-11-12T21:49:28.453006" elapsed="0.000637"/>
+</kw>
+<kw name="Output Should Contain" owner="AppLibrary">
+<arg>Password invalid</arg>
+<status status="PASS" start="2026-11-12T21:49:28.453774" elapsed="0.000065"/>
+</kw>
+<status status="PASS" start="2026-11-12T21:49:28.451751" elapsed="0.002219"/>
+</test>
+<status status="PASS" start="2026-11-12T21:49:28.435840" elapsed="0.018495"/>
+</suite>
+<status status="PASS" start="2026-11-12T21:49:28.375475" elapsed="0.079366"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="9" fail="0" skip="0">Tests</stat>
+<stat name="Login" id="s1-s1" pass="3" fail="0" skip="0">Tests.Login</stat>
+<stat name="Register" id="s1-s2" pass="6" fail="0" skip="0">Tests.Register</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
